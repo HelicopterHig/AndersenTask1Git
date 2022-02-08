@@ -1,20 +1,24 @@
-@file:JvmName("Main")
-@file:Suppress("UNUSED_EXPRESSION")
-
 package com.mr.sudokusolver
 
+class Button {
+    var width: Int = 0
+    var height: Int = 0
+    // your code goes here
 
+    get() = field
 
-fun main(args: Array<String>) {
-    var msg = "Hello"
-    change(msg)
-    print(msg)
-    msg = change(msg)
-    print(msg)
+    set(height){
+        if (height < 50){
+            field = 50
+        } else {
+            field = height
+        }
+    }
 }
+fun main(args: Array<String>) {
+    val b1 = Button()
+    b1.height = readLine()!!.toInt()
+    b1.width = readLine()!!.toInt()
 
-fun change(msg: String): String {
-    var msg = msg
-    msg = "$msg world!"
-    return " java!"
+    println(b1.width+b1.height)
 }
