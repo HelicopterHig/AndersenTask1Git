@@ -14,7 +14,7 @@ class Button {
             field = height
         }
     }
-}
+}  
 fun main(args: Array<String>) {
     val b1 = Button()
     b1.height = readLine()!!.toInt()
